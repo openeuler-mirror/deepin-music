@@ -1,6 +1,6 @@
 Name:           deepin-music
 Version:        5.0.1
-Release:        3%{?dist}
+Release:        4
 Summary:        Deepin Music Player
 Summary(zh_CN): 深度音乐播放器
 License:        GPLv3
@@ -83,5 +83,8 @@ appstream-util validate-relax --nonet %{buildroot}/%{_metainfodir}/%{name}.appda
 
 
 %changelog
-* Tue Aug 03 2021 weidong <weidong@uniontech.com> - 5.0.1-1
+* Fir Dec 10 2021 weidong <weidong@uniontech.com> - 5.0.1-4
+- Delete dist macro
+
+* Tue Aug 03 2021 weidong <weidong@uniontech.com> - 5.0.1-3
 - Init package
