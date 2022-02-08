@@ -1,12 +1,13 @@
 Name:           deepin-music
 Version:        5.0.1
-Release:        3%{?dist}
+Release:        4
 Summary:        Deepin Music Player
 Summary(zh_CN): 深度音乐播放器
 License:        GPLv3
 Url:            https://github.com/linuxdeepin/deepin-music
 Source0:        %{url}/archive/%{version}/%{name}-%{version}.tar.gz
 Source1:        %{name}.appdata.xml
+Patch0:         modify-QPainterPath-error.patch
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  qt5-linguist
@@ -29,6 +30,7 @@ BuildRequires:  pkgconfig(Qt5X11Extras)
 BuildRequires:  pkgconfig(Qt5Multimedia)
 BuildRequires:  gcc
 BuildRequires:  libappstream-glib
+BuildRequires:  qt5-qtbase-private-devel
 Requires:       hicolor-icon-theme
 Requires:       deepin-desktop-base
 Requires:       gstreamer1-plugins-good
@@ -45,7 +47,7 @@ you will found.
 其他特性如音乐搜索, 丰富多彩的歌词支持, 更多功能等待您发现.
 
 %prep
-%autosetup
+%autosetup -p1
 sed -i '/vendor/d' src/src.pro
 sed -i '/%1/s|lib|%{_lib}|' src/music-player/core/pluginmanager.cpp
 sed -i '/target.path/s|lib|%{_lib}|' src/libdmusic/libdmusic.pro \
@@ -83,5 +85,8 @@ appstream-util validate-relax --nonet %{buildroot}/%{_metainfodir}/%{name}.appda
 
 
 %changelog
-* Tue Aug 03 2021 weidong <weidong@uniontech.com> - 5.0.1-1
+* Mon Feb 07 2022 liweigang <liweiganga@uniontech.com> - 5.0.1-4
+- fix build error and delete dist macro
+
+* Tue Aug 03 2021 weidong <weidong@uniontech.com> - 5.0.1-3
 - Init package

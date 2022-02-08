@@ -1,0 +1,33 @@
+diff --color -Naur a/src/music-player/view/lyricwidget.cpp b/src/music-player/view/lyricwidget.cpp
+--- a/src/music-player/view/lyricwidget.cpp	2022-02-07 17:31:46.450755712 +0800
++++ b/src/music-player/view/lyricwidget.cpp	2022-02-07 17:34:11.362579039 +0800
+@@ -29,6 +29,7 @@
+ #include <QHBoxLayout>
+ #include <QListView>
+ #include <QPainter>
++#include <QPainterPath>
+ #include <QResizeEvent>
+ #include <QPaintEvent>
+ #include <QStringListModel>
+diff --color -Naur a/src/music-player/view/widget/cover.cpp b/src/music-player/view/widget/cover.cpp
+--- a/src/music-player/view/widget/cover.cpp	2022-02-07 17:31:46.450755712 +0800
++++ b/src/music-player/view/widget/cover.cpp	2022-02-07 17:34:32.482563105 +0800
+@@ -23,6 +23,7 @@
+ 
+ #include <QDebug>
+ #include <QPainter>
++#include <QPainterPath>
+ #include <QGraphicsDropShadowEffect>
+ 
+ static auto borderPenWidth = 1.0;
+diff --color -Naur a/src/music-player/view/widget/soundvolume.cpp b/src/music-player/view/widget/soundvolume.cpp
+--- a/src/music-player/view/widget/soundvolume.cpp	2022-02-07 17:31:46.450755712 +0800
++++ b/src/music-player/view/widget/soundvolume.cpp	2022-02-07 17:33:44.630602514 +0800
+@@ -23,6 +23,7 @@
+ 
+ #include <QDebug>
+ #include <QPainter>
++#include <QPainterPath>
+ #include <QWheelEvent>
+ #include <QGraphicsDropShadowEffect>
+ #include <QVBoxLayout>
