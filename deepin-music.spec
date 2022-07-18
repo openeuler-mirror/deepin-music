@@ -88,7 +88,7 @@ appstream-util validate-relax --nonet %{buildroot}/%{_metainfodir}/%{name}.appda
 * Mon Feb 07 2022 liweigang <liweiganga@uniontech.com> - 5.0.1-5
 - fix build error
 
-* Fir Dec 10 2021 weidong <weidong@uniontech.com> - 5.0.1-4
+* Fri Dec 10 2021 weidong <weidong@uniontech.com> - 5.0.1-4
 - Delete dist macro
 
 * Tue Aug 03 2021 weidong <weidong@uniontech.com> - 5.0.1-3
